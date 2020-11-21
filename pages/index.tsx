@@ -1,6 +1,7 @@
+import { NextPage } from 'next';
 import Layout from '../components/layout'
 
-export default function Page () {
+const IndexPage: NextPage = () => {
   return (
     <Layout>
       <h1>NextAuth.js Example</h1>
@@ -11,6 +12,7 @@ export default function Page () {
   )
 }
 
+export default IndexPage;
 
 // import Head from 'next/head'
 // import { signIn, signOut, useSession } from 'next-auth/client'
