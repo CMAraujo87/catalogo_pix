@@ -1,12 +1,17 @@
 import { NextPage } from 'next';
+import { signIn, signOut, useSession } from 'next-auth/client'
 import Layout from '../components/layout'
 
 const IndexPage: NextPage = () => {
+  const [ session ] = useSession()
   return (
     <Layout>
       <h1>NextAuth.js Example</h1>
       <p>
         This is an example site to demonstrate how to use <a href={`https://next-auth.js.org`}>NextAuth.js</a> for authentication.
+      </p>
+      <p>
+          <pre>{JSON.stringify({session}, null, 2)}</pre>
       </p>
     </Layout>
   )
